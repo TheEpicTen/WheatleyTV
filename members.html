@@ -45,6 +45,61 @@ a:active {
   background-color: black;
   color:white;
 }
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #858585; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #00000;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 }
     </style>
     <meta charset="utf-8">
@@ -60,7 +115,27 @@ a:active {
     <![endif]-->
   </head>
   <body>
-	 <div class="Header">
+	<div class="Header">
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+  <a href="">Home</a>
+  <a href="Https://WheatleyCraft.ml/members">Members</a>
+  <h3><u>Seasons</u></h3>
+  <a href="Https://WheatleyCraft.ml/season-1">Season 1</a>
+  </div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()"><img src="https://i.ibb.co/Km2fGsn/menu.jpg" alt="menu" border="0" style="width:5%;"></a></span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 	  <div align="center"><img src="https://i.ibb.co/1b9chYk/Wheatley-Craftext.png" alt="Wheatley-Craftext" border="0" style="width:100%;"></div>
 	  <div align="center"><h3><u><a href="Https://WheatleyCraft.ml">Home</a></u> <u>Members</u><h3></div>
 	</div>
