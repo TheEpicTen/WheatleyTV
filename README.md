@@ -1,2 +1,2 @@
-# WheatleyCraft
-This is where the code for the official Wheatleycraft Site is stored. Please do not copy it!
+# Wheatley TV website
+This repository contains the code for wheatleytv.cf . Feel free to copy bits of it but please do not copy the whole thing.
