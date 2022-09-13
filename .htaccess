@@ -1,0 +1,6 @@
+AuthUserFile .htpassword
+AuthGroupFile /dev/null
+AuthName EnterPassword
+AuthType Basic
+
+require user WheatleyCraft
