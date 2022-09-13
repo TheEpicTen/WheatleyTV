@@ -116,6 +116,31 @@ a:active {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 }
     </style>
 	<meta charset="utf-8">
@@ -142,6 +167,7 @@ a:active {
   <a href="https://wheatleytv.cf/downloads">Downloads</a>
   <br>
   <a href="https://wheatleycraft.ml">WheatleyCraft</a>
+	  <br>
   <button type="button" class="collapsible">Mods and Datapacks</button>
   <div class="content">
   <p>Lorem ipsum...</p>
@@ -150,7 +176,20 @@ a:active {
 </div>
 <div class="content">
 <div align="center"><h1>WheatleyCraft</h1>
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 </div>
   </head>
   <body>
